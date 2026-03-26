@@ -726,7 +726,21 @@
 
               if (submitted) {
                 radio.disabled = true;
-                const isCorrect = JSON.stringify(option.mapping) === JSON.stringify(data.correctMapping);
+                // Compare mappings by checking all key-value pairs (order-independent)
+                let isCorrect = true;
+                const optKeys = Object.keys(option.mapping);
+                const correctKeys = Object.keys(data.correctMapping);
+                if (optKeys.length !== correctKeys.length) {
+                  isCorrect = false;
+                } else {
+                  for (let k = 0; k < optKeys.length; k++) {
+                    const key = optKeys[k];
+                    if (option.mapping[key] !== data.correctMapping[key]) {
+                      isCorrect = false;
+                      break;
+                    }
+                  }
+                }
                 if (isCorrect) {
                   label.style.background = currentTheme.correctBg;
                   label.style.color = "white";
