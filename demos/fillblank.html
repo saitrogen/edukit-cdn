@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKit Fill in the Blank Demo</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../v1/edukit.js"></script>
+  <script>
+    EduKit.render("#app", {
+      component: "fillblank",
+      theme: "colorful",
+      data: {
+        title: "Biology - Cell Organelles",
+        questions: [
+          {
+            sentence: "The ___ is known as the powerhouse of the cell.",
+            answer: "mitochondria"
+          },
+          {
+            sentence: "The ___ is responsible for protein synthesis in the cell.",
+            answer: "ribosome"
+          },
+          {
+            sentence: "The ___ contains the genetic material DNA.",
+            answer: "nucleus"
+          },
+          {
+            sentence: "The ___ apparatus packages and modifies proteins for secretion.",
+            answer: "golgi"
+          },
+          {
+            sentence: "Plant cells contain ___ which perform photosynthesis.",
+            answer: "chloroplasts"
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>

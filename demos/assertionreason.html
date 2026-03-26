@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKit Assertion-Reason Demo</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../v1/edukit.js"></script>
+  <script>
+    EduKit.render("#app", {
+      component: "assertionreason",
+      theme: "light",
+      data: {
+        title: "NEET Biology - Assertion and Reason Questions",
+        questions: [
+          {
+            assertion: "Mitochondria is known as the powerhouse of the cell.",
+            reason: "Mitochondria synthesizes ATP via cellular respiration.",
+            answer: 1
+          },
+          {
+            assertion: "Ribosomes are the site of protein synthesis.",
+            reason: "Ribosomes contain DNA which codes for proteins.",
+            answer: 2
+          },
+          {
+            assertion: "Chloroplasts are found in plant cells.",
+            reason: "Chloroplasts are responsible for cellular respiration.",
+            answer: 3
+          },
+          {
+            assertion: "The cell membrane is selectively permeable.",
+            reason: "All molecules can freely pass through the cell membrane.",
+            answer: 3
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
