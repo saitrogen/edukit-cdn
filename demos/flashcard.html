@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKit Flashcard Demo</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="../v1/edukit.js"></script>
+  <script>
+    EduKit.render("#app", {
+      component: "flashcard",
+      theme: "dark",
+      data: {
+        title: "Chemistry Flashcards - Periodic Table",
+        cards: [
+          {
+            term: "Hydrogen (H)",
+            definition: "Atomic number 1, lightest element, most abundant in the universe"
+          },
+          {
+            term: "Carbon (C)",
+            definition: "Atomic number 6, basis of organic chemistry, forms 4 covalent bonds"
+          },
+          {
+            term: "Oxygen (O)",
+            definition: "Atomic number 8, essential for respiration, highly electronegative"
+          },
+          {
+            term: "Nitrogen (N)",
+            definition: "Atomic number 7, makes up 78% of Earth's atmosphere, triple bond in N₂"
+          },
+          {
+            term: "Gold (Au)",
+            definition: "Atomic number 79, noble metal, excellent conductor, highly unreactive"
+          },
+          {
+            term: "Iron (Fe)",
+            definition: "Atomic number 26, transition metal, essential for hemoglobin"
+          }
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
