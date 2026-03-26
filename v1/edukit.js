@@ -783,7 +783,6 @@
             container.appendChild(qLabel);
 
             const assertionP = document.createElement("p");
-            assertionP.innerHTML = "";
             const assertionLabel = document.createElement("strong");
             assertionLabel.textContent = "Assertion (A): ";
             assertionP.appendChild(assertionLabel);
